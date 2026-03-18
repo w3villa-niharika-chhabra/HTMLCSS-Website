@@ -14,8 +14,12 @@
 
         <!-- NAVBAR -->
         <div class="navbar">
+            
             <div class="logo"></div>
-
+            <div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+    
             <div class="nav-links">
                 <a href="#">HOME</a>
                 <a href="#">PAGES</a>
@@ -29,7 +33,8 @@
                 <span>
                     <i data-lucide="search"></i>
                 </span>
-                <a href="#" class="quote-btn">FREE QUOTE</a>
+                <button class="quote-btn"><a href="#" >FREE QUOTE</a></button>
+                
             </div>
         </div>
 
@@ -56,7 +61,9 @@
         <div class="service-container mob">
             <div class="card">
                 <div class="top">
-                    <div class="icon"><i data-lucide="notebook-pen"></i> </div>
+                    <div class="icon">
+                        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/13728/13728584.png"/>
+                    </div>
                     <h3>Strategic Planning</h3>
                     <p>We help a business generate new product ideas with intelligence.</p>
                 </div>
@@ -68,7 +75,7 @@
             <div class="card">
                 <div class="top">
                     <div class="icon">
-                        <i data-lucide="chart-pie"></i>
+                        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/9371/9371407.png"/>
                     </div>
                     <h3>Market Analysis</h3>
                     <p>We help a business generate new product ideas with intelligence.</p>
@@ -81,7 +88,7 @@
             <div class="card">
                 <div class="top">
                     <div class="icon">
-                        <i data-lucide="hand-coins"></i>
+                        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/2506/2506012.png"/>
                     </div>
                     <h3>Finance Planning</h3>
                     <p>We help a business generate new product ideas with intelligence.</p>
@@ -94,7 +101,7 @@
             <div class="card">
                 <div class="top">
                     <div class="icon">
-                        <i data-lucide="hand-coins"></i>
+                        <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/9934/9934699.png"/>
                     </div>
                     <h3>Investment Idea</h3>
                     <p>We help a business generate new product ideas with intelligence.</p>
@@ -192,7 +199,7 @@
 
         <div class="team-container">
             <div class="card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZMrshLL1mmubcMXra6gwyqKyJpxVLCuMRs69rpp8uocAS3YTh7tvnprGTnDDntmDnm-TCBK6vIFZ6DE91uNTBSPwbf1Yu&s&ec=121585077"
+                <img class="people" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZMrshLL1mmubcMXra6gwyqKyJpxVLCuMRs69rpp8uocAS3YTh7tvnprGTnDDntmDnm-TCBK6vIFZ6DE91uNTBSPwbf1Yu&s&ec=121585077"
                     alt="">
                 <h3>Amy Jenkins</h3>
                 <p>Financial Analyst</p>
@@ -206,7 +213,7 @@
             </div>
 
             <div class="card">
-                <img src="https://www.davd.photo/wp-content/uploads/2019/03/rocco-roxie-employee-headshots-4.jpg"
+                <img class="people" src="https://www.davd.photo/wp-content/uploads/2019/03/rocco-roxie-employee-headshots-4.jpg"
                     alt="">
                 <h3>Jeffry Mueller</h3>
                 <p>Marketing Analyst</p>
@@ -220,7 +227,7 @@
             </div>
 
             <div class="card">
-                <img src="https://headshotcompany.co.uk/wp-content/uploads/2023/11/Staff-Photography-Northampton.jpg"
+                <img class="people" src="https://headshotcompany.co.uk/wp-content/uploads/2023/11/Staff-Photography-Northampton.jpg"
                     alt="">
                 <h3>Anne Arias</h3>
                 <p>Statistical Analyst</p>
@@ -234,7 +241,7 @@
             </div>
 
             <div class="card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzz7VCYC3EwEjDelEg4SMwwm0Es1rMHhDmdScHMhygf-QrXUjzM0hC2EggEVC9ImpiitVvOu0z5ttgRQZXLFU76Ln9msoh&s&ec=121585077"
+                <img class="people" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzz7VCYC3EwEjDelEg4SMwwm0Es1rMHhDmdScHMhygf-QrXUjzM0hC2EggEVC9ImpiitVvOu0z5ttgRQZXLFU76Ln9msoh&s&ec=121585077"
                     alt="">
                 <h3>Gerald Ruggiero</h3>
                 <p>Business Eng.</p>
@@ -347,7 +354,6 @@
     </section>
 
     <!-- FOOTER -->
-    <section>
         <div>
             <footer class="footer">
                 <div class="footer-top">
@@ -434,12 +440,23 @@
                 </div>
             </footer>
         </div>
-    </section>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
-    </script>
+
+  function toggleMenu() {
+  const elements = document.querySelectorAll(".nav-links, .quote-btn");
+  
+  elements.forEach(el => {
+    el.classList.toggle("active");
+  });
+
+
+
+}
+
+</script>
 
 </body>
 
